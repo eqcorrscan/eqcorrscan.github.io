@@ -5,7 +5,7 @@ tagline: Matched-filter earthquake detection in Python
 ---
 {% include JB/setup %}
 
-[![Here is supposed to be the EQcorrscan logo]({{ site.production_url }}/assets/EQcorrscan_logo.png)](http://eqcorrscan.readthedocs.org/en/latest)
+[![Here is supposed to be the EQcorrscan logo](assets/EQcorrscan_logo.png)](http://eqcorrscan.readthedocs.org/en/latest)
 
 
 [![Join the chat at https://gitter.im/eqcorrscan/EQcorrscan](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/eqcorrscan/EQcorrscan?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
