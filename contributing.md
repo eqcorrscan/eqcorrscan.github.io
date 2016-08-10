@@ -15,7 +15,7 @@ If you want to contribute to the project there are a number of ways to do it:
 
 * There will be bugs in the code, some systems will break, some will give you
 an odd answer, **be wary**.  If and when you do find bugs, if they are not big
-then you should create an [issue](https://github.com/calum-chamberlain/EQcorrscan/issues),
+then you should create an [issue](https://github.com/eqcorrscan/EQcorrscan/issues),
 or check the current issues and add your comments to that.  When flagging a bug
 please give useful things like terminal output, error messages, what input you
 used and if possible, highlight where in the source code you think the bug is.
@@ -23,15 +23,15 @@ used and if possible, highlight where in the source code you think the bug is.
  process of developing tests for all our functions, currently the major ones
  are implemented, but there are lots left to go.
 * If you want to learn about the codes, how they work, check where they could be
-improved etc., then fork the [repo](https://github.com/calum-chamberlain/EQcorrscan)
+improved etc., then fork the [repo](https://github.com/eqcorrscan/EQcorrscan)
 and scan through them - make them more readable, improve the docs, anything you
 like, it's all appreciated.
 * If there is something you want to see in the package, you could check to see if
-we have it on our [list of things to develop](https://github.com/calum-chamberlain/EQcorrscan/issues/3),
+we have it on our [list of things to develop](https://github.com/eqcorrscan/EQcorrscan/issues/3),
 and if not, add it!
 
 If you want to have a go at adding a feature (which would be great)
-then please fork the [repo](https://github.com/calum-chamberlain/EQcorrscan) on
+then please fork the [repo](https://github.com/eqcorrscan/EQcorrscan) on
 github, and create your own feature branch.  We are trying to follow the
 [github flow](http://nvie.com/posts/a-successful-git-branching-model/) branching
 model, so you might want to install their command-line

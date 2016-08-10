@@ -5,7 +5,7 @@ permalink: /installation/
 group: navigation
 ---
 
-Since October 2015 EQcorrscan has been listed on [pypi](https://pypi.python.org/pypi/EQcorrscan/0.0.8); as such installation
+Since October 2015 EQcorrscan has been listed on [pypi](https://pypi.python.org/pypi/EQcorrscan); as such installation
 is as simple as:
 
 {% highlight bash %}
