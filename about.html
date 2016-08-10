@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>EQcorrscan: About</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/EQcorrscan_logo.png" alt="" /></a>
+					<h1><strong>EQcorrscan</strong>: Detection <br />
+					and analysis of repeating<br />
+					and near-repeating seismicity.</h1><br />
+					<h2>
+						<a href="about.html">About</a><br />
+						<a href="contributing.html">Contributing</a><br />
+						<a href="installation.html">Installation</a></h2>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>EQcorrscan: About</h2>
+						</header>
+						<p>
+							EQcorrscan is an earthquake detection package written in Python for Windows, OS X and Linux,
+							and distributed under the LGPL.  The purpose of this package is to detect repeating and
+							near-repeating earthquakes from continuous seismic data.  Although this package
+							is designed first-and-foremost to use data from a seismic network, it works
+							equally well when using a single station.<p>
+
+						<p>
+							The codes are designed for large-scale problems with multiple (hundreds to
+							thousands of) templates, run over multiple days of data.  However, it works
+							equally well for simple problems, with few templates and not much data - you just
+							don't see the benefit of the parallel processing so much.
+						</p>
+
+						<p>
+							At the heart of the routine, multiple templates are correlated with the same
+							day of data in parallel. using the Python
+							<a href="https://docs.python.org/2/library/multiprocessing.html">multiprocessing</a> module.
+							As such the parallel processing at this level is CPU bound (you can run as many
+							templates in parallel as your machine has CPUs).  </p>
+
+						<p>
+							In addition to this CPU bound parallel computation, our correlation routines take
+							advantage of multi-threading by using the matchTemplate routine of the
+							<a href="http://opencv.org/">opencv</a> image processing library.</p>
+
+						<p>
+							At the top level, multiple days can be run in parallel on multiple nodes, or
+							machines.  For this, I have taken advantage of the <a href="https://www.nesi.org.nz/">NeSi</a>
+							PAN HPC cluster.</p>
+
+						<p>
+							This package has been tested on machines ranging from small dual-core laptops
+							and desktops, to large (multi-thousand core) cluster computers.  The codes
+							scale well when increasing the processing power, resulting in the ability to
+							use (tested) <strong>600 templates, through 6.5 years of data in less than 10 hours clock time</strong>.</p>
+
+							<h1>Design</h1>
+
+						<p>
+							These codes have been developed by Calum Chamberlain, during his time as a graduate
+							student at Victoria University of Wellington, New Zealand.  The codes have been
+							developed to:
+						<ul>
+							<li>Work;</li>
+							<li>Be readable;</li>
+							<li>Have a well-documented <a href="http://eqcorrscan.readthedocs.org/en/latest/?badge=latest">API</a>;</li>
+							<li>Be quick and easy to install, and therefore - improve.</li>
+						</ul></p>
+
+						<p>
+							To this end, our codes are freely available on github, with both master and
+							development branches. They also have an initial set of utilities that allow integration
+							with <a href="http://seisan.info/">Seisan</a>, which was chosen to be the first integrated
+							standard observatory software, simply due to familiarity. We have since integrated with Obspy
+							Event classes to allow many event meta-data types to be handled.  We also
+							have routines for reading pick data from SAC files to generate templates.
+							These utilities also have methods for:
+							<ul>
+							<li><a href="http://eqcorrscan.readthedocs.org/en/latest/submodules/utils.clustering.html">clustering</a>;</li>
+							<li><a href="http://eqcorrscan.readthedocs.org/en/latest/submodules/utils.stacking.html">stacking</a>;</li>
+							<li><a href="http://eqcorrscan.readthedocs.org/en/latest/submodules/utils.mag_calc.html">magnitude calculation</a>, including SVD derived magnitudes;</li>
+							<li><a href="http://eqcorrscan.readthedocs.org/en/latest/submodules/utils.findpeaks.html">peak-finding in noisy data</a>.</li></ul></p>
+
+						<p>
+							We do not claim that these codes are the necasarily the best available, but we hope to
+							ignite collaboration from observational seismologists (and ideally computer
+							scientists) to help grow this project.  Ideally we would like to see this being
+							a useful test-base for people to develop and share methods.
+						</p>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/eqcorrscan/EQcorrscan" class="icon fa-github"><span class="label">Github</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Calum Chamberlain 2016</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>EQcorrscan: Contributing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/EQcorrscan_logo.png" alt="" /></a>
+					<h1><strong>EQcorrscan</strong>: Detection <br />
+					and analysis of repeating<br />
+					and near-repeating seismicity.</h1><br />
+					<h2>
+						<a href="about.html">About</a><br />
+						<a href="contributing.html">Contributing</a><br />
+						<a href="installation.html">Installation</a></h2>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Contributing</h2>
+						</header>
+						<h2 id="first-contributions">First contributions</h2>
+
+						<p>If you want to contribute to the project there are a number of ways to do it:</p>
+
+						<ul>
+						  <li>There will be bugs in the code, some systems will break, some will give you
+						an odd answer, <strong>be wary</strong>.  If and when you do find bugs, if they are not big
+						then you should create an <a href="https://github.com/eqcorrscan/EQcorrscan/issues">issue</a>,
+						or check the current issues and add your comments to that.  When flagging a bug
+						please give useful things like terminal output, error messages, what input you
+						used and if possible, highlight where in the source code you think the bug is.</li>
+						  <li>If you just want to get involved and give something back, we are in the
+						 process of developing tests for all our functions, currently the major ones
+						 are implemented, but there are lots left to go.</li>
+						  <li>If you want to learn about the codes, how they work, check where they could be
+						improved etc., then fork the <a href="https://github.com/eqcorrscan/EQcorrscan">repo</a>
+						and scan through them - make them more readable, improve the docs, anything you
+						like, it’s all appreciated.</li>
+						  <li>If there is something you want to see in the package, you could check to see if
+						we have it on our <a href="https://github.com/eqcorrscan/EQcorrscan/issues/3">list of things to develop</a>,
+						and if not, add it!</li>
+						</ul>
+
+						<p>If you want to have a go at adding a feature (which would be great)
+						then please fork the <a href="https://github.com/eqcorrscan/EQcorrscan">repo</a> on
+						github, and create your own feature branch.  We are trying to follow the
+						<a href="http://nvie.com/posts/a-successful-git-branching-model/">github flow</a> branching
+						model, so you might want to install their command-line
+						<a href="https://github.com/nvie/gitflow/wiki/Installation">tools</a>.</p>
+
+						<p>Then when you are done, create a pull request and we can integrate it back so
+						everyone can use it :)</p>
+
+						<h2 id="style-guide">Style-guide</h2>
+
+						<p>We are trying to migrate to a truly
+						<a href="https://www.python.org/dev/peps/pep-0008/https://www.python.org/dev/peps/pep-0008/">pep8-friendly</a>
+						coding style, to that end I would recommend installing
+						<a href="https://flake8.readthedocs.org/en/latest/">flake8</a>.  Our main two developers
+						use the <a href="https://atom.io/https://atom.io/">atom</a>
+						text editor along with <a href="https://atom.io/packages/linter-flake8">linter-flake8</a>,
+						although I often use vim as well.  Up to you.</p>
+
+						<p>We use <a href="http://docs.obspy.org/http://docs.obspy.org/">obspy</a>
+						heavily, so try to follow their
+						<a href="http://docs.obspy.org/coding_style.html">style guide</a>, including
+						the standard import conventions for numpy and matplotlib:</p>
+
+						<figure class="highlight">
+							<pre>
+								<code class="language-python">
+#!/usr/bin/python#!/usr/bin/python
+import numpy as np
+import matplotlib.pyplot as plt
+							</code>
+						</pre>
+					</figure>
+
+						<p>As usual:</p>
+
+						<ul>
+						  <li>Don’t start and end function names with double underscores, these
+						are reserved for python;</li>
+						  <li>Never use dashes (I hate them);</li>
+						  <li>Use descriptive names, in contrast to the pep257 complaints about overly
+						complicated variable names, if it helps the readability then do it;</li>
+						  <li>If you want an internal or hidden function, start the function name with a
+						single underscore;</li>
+						  <li>Don’t use CamelCase for module names, separate words with underscores.</li>
+						</ul>
+
+						<h2 id="documentation">Documentation</h2>
+
+						<p>As you will have seen from the <a href="http://eqcorrscan.readthedocs.org/en/latest/">API</a>,
+						docs are good.  We generate the docs using <a href="http://sphinx-doc.org/">sphinx</a>
+						which can then be compiled either locally, or by
+						<a href="https://readthedocs.org/">readthedocs</a>.  In this way, docstrings are including
+						in the source code.</p>
+
+						<ul>
+						  <li>We work on the principle that <strong>If it’s not documented, it doesn’t exist</strong>.</li>
+						  <li>We also <em>try to</em> work on the principle of <strong>just enough docs</strong>: don’t over document the
+						functions within the script, if you think they need more explaining then the
+						chances are you are doing it wrong.  We work on this basis because the more
+						complicated the docs are, the less likely we are to maintain them.</li>
+						  <li>If you find
+						yourself explaining a method in the docstrings: <strong>don’t</strong>, put a link to a paper.</li>
+						</ul>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/eqcorrscan/EQcorrscan" class="icon fa-github"><span class="label">Github</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Calum Chamberlain 2016</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
