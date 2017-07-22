@@ -59,11 +59,6 @@
 							templates in parallel as your machine has CPUs).  </p>
 
 						<p>
-							In addition to this CPU bound parallel computation, our correlation routines take
-							advantage of multi-threading by using the matchTemplate routine of the
-							<a href="http://opencv.org/">opencv</a> image processing library.</p>
-
-						<p>
 							At the top level, multiple days can be run in parallel on multiple nodes, or
 							machines.  For this, I have taken advantage of the <a href="https://www.nesi.org.nz/">NeSi</a>
 							PAN HPC cluster.</p>
@@ -77,19 +72,8 @@
 							<h1>Design</h1>
 
 						<p>
-							These codes have been developed by Calum Chamberlain, during his time as a graduate
-							student at Victoria University of Wellington, New Zealand.  The codes have been
-							developed to:
-						<ul>
-							<li>Work;</li>
-							<li>Be readable;</li>
-							<li>Have a well-documented <a href="http://eqcorrscan.readthedocs.org/en/latest/?badge=latest">API</a>;</li>
-							<li>Be quick and easy to install, and therefore - improve.</li>
-						</ul></p>
-
-						<p>
-							To this end, our codes are freely available on github, with both master and
-							development branches. They also have an initial set of utilities that allow integration
+							EQcorrscan is freely available on github, and pypi.
+							They also have an initial set of utilities that allow integration
 							with <a href="http://seisan.info/">Seisan</a>, which was chosen to be the first integrated
 							standard observatory software, simply due to familiarity. We have since integrated with Obspy
 							Event classes to allow many event meta-data types to be handled.  We also
